@@ -11,8 +11,12 @@ from telegram.ext import (
 import telegram
 
 # ====== CONFIG ======
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"  # <-- put your token here
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise SystemExit("ERROR: BOT_TOKEN env var not set. Set it in Railway variables.")
 
+# print masked token (only last 6 chars) — safe-ish for debugging on your private server
+print("BOT_TOKEN loaded, last 6 chars:", ("*"*8) + BOT_TOKEN[-6:])
 # ====== GLOBAL STATE ======
 chat_state = {}
 running_tasks = {}
