@@ -11,7 +11,7 @@ from telegram.ext import (
 import telegram
 
 # ====== CONFIG ======
-BOT_TOKEN = "8505731943:AAHEk7vVlR0286QzYN4xRrjd050HIm5zyL8"
+BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"  # <-- put your token here
 
 # ====== GLOBAL STATE ======
 chat_state = {}
